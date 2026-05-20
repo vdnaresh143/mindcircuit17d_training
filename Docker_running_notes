@@ -122,3 +122,86 @@ root@dockerhost:~# history
   121  docker images -q
   122  docker rmi $(docker images -q)
   123  docker images
+
+  126  docker -v
+  127  systemctl enable docker
+  128  docker images
+  129  docker ps -a
+  130  docker run --name cont1 amazonlinux
+  131  docker ps -a
+  132  docker run -it --name cont2 amazonlinux
+  133  docker ps -a
+  134  docker ps
+  135  docker exec -it cont2 /bin/bash
+  136  docker ps -a
+  137  docker commit cont2
+  138  docker images
+  139  docker images -a
+  140  docker tag 01145c45c8ed amazonlinux:gitjava
+  141  docker images -a
+  142  docker push amazonlinux:gitjava
+  143  docker login
+  144  docker push amazonlinux:gitjava
+  145  docker images
+  146  docker push amazonlinux:gitjava vnaresh2702/amalinux:gitjava
+  147  docker tag amazonlinux:gitjava vnaresh2702/batch17d:gitjava
+  148  docker images
+  149  docker push vnaresh2702/batch17d:gitjava
+  150  docker ps
+  151  docker run -itd --name cont3 amazonlinux
+  152  docker ps
+  153  docker run -itd --name cont4 amazonlinux sleep 15
+  154  docker ps -a
+  155  docker run -it --name contd amazonlinux sleep 15
+  156  docker ps -a
+  157  docker run -it --name contd amazonlinux ping www.google.com
+  158  docker ps -a
+  159  yum install httpd -y
+  160  apt install httpd -y
+  161  apt update
+  162  apt install apache2 -y
+  163  systemctl start apache2
+  164  cd /var/www/html/
+  165  ll
+  166  vim index.html
+  167  cat index.html
+  168  vim index.html
+  169  vi index.html
+  170  vim index.html
+  171  docker ps -a
+  172  docker rm -f $(docker ps -aq)
+  173  docker ps -a
+  174  cd /
+  175  cd /opt/
+  176  docker run -it --name hr_cont amazonlinux
+  177  docker ps
+  178  docker run -it --name hr_cont2 -p 8008:80 amazonlinux
+  179  docker ps
+  180  ls
+  181  touch index.html
+  182  vim index.html
+  183  docker cp index.html hr_cont2:/var/www/html/index.html
+  184  docker commit hr_cont2
+  185  docker images -a
+  186  docker tag 10b81795fe2f vnaresh2702/bach17d:httpd_hr
+  187  docker images
+  188  docker push vnaresh2702/batch17d:httpd_hr
+  189  docker login
+  190  docker push vnaresh2702/batch17d:httpd_hr
+  191  docker push vnaresh2702/bach17d:httpd_hr
+  192  docker rm -f $(docker ps -aq)
+  193  docker rmi $(docker images -q)
+  194  docker rmi -f $(docker images -q)
+  195  docker images
+  196  docker ps -a
+  197  ll
+  198  rm -rf *
+  199  ll
+  200  docker pull vnaresh2702/bach17d:httpd_hr
+  201  docker images
+  202  docker run itd --name hrcont_b17d -p 8085:80 vnaresh2702/batch17d:httpd_hr
+  203  docker run itd --name hrcont_b17d -p 8085:80 vnaresh2702/bach17d:httpd_hr
+  204  docker login
+  205  docker run itd --name hrcont_b17d -p 8085:80 vnaresh2702/bach17d:httpd_hr
+  206  history
+
