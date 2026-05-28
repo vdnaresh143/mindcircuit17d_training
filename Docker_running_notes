@@ -390,4 +390,352 @@ re-done the practice
   180  cd /opt/
   181  vim index.html
   182  docker cp index.html cont1:/var/www/html/index.html
+--------------------------------------------------------------------------------
+
+[root@dockerhost ~]# history
+    1  docker -v
+    2  yum install docker -y
+    3  docker -v
+    4  systemctl status docker
+    5  systemctl start docker
+    6  systemctl status docker
+    7  docker info
+    8  cd /opt/
+    9  ll
+   10  docker images
+   11  docker search amazonlinux
+   12  docker pull amazonlinux
+   13  docker images
+   14  docker pull ubuntu
+   15  docker image
+   16  docker pull centos
+   17  docker pull tomcat
+   18  docker images
+   19  docker run amazonlinux
+   20  docker contianer ls
+   21  docker container ls
+   22  docker container ls -a
+   23  docker ps -a
+   24  docker run ubuntu
+   25  docker ps -a
+   26  docker run -it amazonlinux
+   27  docker ps -a
+   28  docker run -it --name N1 amazonlinux
+   29  docker ps -a
+   30  docker ps
+   31  docker ps -a
+   32  docker rename objective_mclaren cont1
+   33  docker ps -a
+   34  docker rename magical_hertz cont2
+   35  docker rename funny_ramanujan cont3
+   36  docker start cont1
+   37  docker ps -a
+   38  docker start cont2
+   39  docker ps -a
+   40  docker pause cont3
+   41  docker pause cont2
+   42  docker ps -a
+   43  docker start cont2
+   44  docker ps -a
+   45  docke start cont3
+   46  docker start cont3
+   47  docker ps -a
+   48  docker pause cont1
+   49  docker ps -a
+   50  docker unpause cont1
+   51  docker ps -a
+   52  docker attach N1
+   53  docker ps -a
+   54  docker start N1
+   55  docker exec -it N1/bin/bash
+   56  docker exec -it N1 /bin/bash
+   57  docker ps -a
+   58  history
+   59  docker ps -
+   60  docker ps -a
+   61  docker stop cont1
+   62  docker ps -a
+   63  docker rm 0b9f1da3a5a7
+   64  docker ps -a
+   65  docker rm cont2
+   66  docker ps -a
+   67  docker rm N1
+   68  docker images
+   69  docker rmi 30ba44506a6d
+   70  docker images
+   71  docker ps -a
+   72  docker ps -aq
+   73  docker rm -f $(docker ps -aq)
+   74  docker ps -a
+   75  docker images -q
+   76  docker rmi $(docker images -q)
+   77  docker images -q
+   78  docker images
+   79  docker run -it --name cont1 amazonlinux
+   80  docker run -it --name cont2 amazonlinux
+   81  docker ps
+   82  docker commit cont1
+   83  docker images
+   84  docker run -it --name cont3 f65e39fbed33
+   85  docker run -it --name cont4 f65e39fbed33
+   86  docker images
+   87  docker tag f65e39fbed33 amazonlinux:git
+   88  docker images
+   89  docker login
+   90  exit
+   91  hostnamectl set-hostname dockerhost
+   92  sudo su -
+   93  exit
+   94  cd /opt/
+   95  history
+   96  systemctl status docker
+   97  docker ps -a
+   98  docker ps -aq
+   99  docker rm -f $(docker ps -aq)
+  100  docker images -q
+  101  docker rmi -f $(docker images -q)
+  102  docker images
+  103  docker ps -a
+  104  docker run -it --name cont1 amazonlix
+  105  docker run -it --name cont1 amazonlinux
+  106  docker ps -a
+  107  docker commit cont1
+  108  docker imags
+  109  docker images
+  110  docker tag acdf4092a99b amazonlinux:gitjava
+  111  docker images
+  112  docker run -it --name sbx amazonlinux:gitjava
+  113  docker run -it --name prod amazonlinux:gitjava
+  114  docker ps -a
+  115  docker attach prod
+  116  docker ps -a
+  117  docker exec -it sbx /bin/bash
+  118  docker ps -a
+  119  docker login
+  120  docker push amazonlinux:gitjava
+  121  docker tag 4452d55cae45 kubenaresh/batch17d_1:git_java
+  122  docker tag de8ee4483d70 kubenaresh/batch17d_1:git_java
+  123  docker ps -a
+  124  docker images
+  125  docker tag acdf4092a99b kubenaresh/batch17d_1:git_java
+  126  docker images
+  127  docker push kubenaresh/batch17d_1:git_java
+  128  docker ps
+  129  docker run -it --name cont2 amazonlinux sleep 15
+  130  docker ps -a
+  131  docker run -itd --name cont3 amazonlinux sleep 15
+  132  docker ps -a
+  133  docker ps
+  134  docker run -itd --name cont4 amazonlinux sleep 15
+  135  docker ps
+  136  docker ps -a
+  137  docker ps
+  138  docker ps -a
+  139  docker exec -it sbx /bin/bash
+  140  exit
+  141  cd /opt/
+  142  history
+  143  docker exec -it sbx /bin/bash
+  144  docker ps -a
+  145  docker start sbx
+  146  docker start cont1
+  147  docker ps -a
+  148  docker exec -it sbx /bin/bash
+  149  docker run -itd --name cont6 amazonlinux ping www.google.com
+  150  docker ps -a
+  151  cd
+  152  yum install httpd -y
+  153  systemctl start httpd
+  154  systemctl status httpd
+  155  cd /var/www/html/
+  156  vim index.html
+  157  docker run -it --name httpd_ct1 amazonlinux
+  158  docker ps -a
+  159  docker ps
+  160  docker run -it --name httpd_ct2 amazonlinux -p 8085:80
+  161  docker run -it --name httpd_ct2 -p 8085:80 amazonlinux
+  162  docker run -it --name httpd_ct3 -p 8085:80 amazonlinux
+  163  docke rps
+  164  docker ps
+  165  docker exec -it httpd_ct3
+  166  docker commit httpd_ct3
+  167  docker images
+  168  docker tag fa8b8afea535 kubenaresh/batch17d_1:httpd
+  169  docker images
+  170  docker push kubenaresh/batch17d_1:httpd
+  171  docker rm -f $(docker ps -aq)
+  172  docker rmi -f $(docker images -q)
+  173  docker images
+  174  docker pull kubenaresh/batch17d_1:httpd
+  175  docker images
+  176  docker run -it --name cont1 -p 8080:80 fa8b8afea535
+  177  systemctl enable docker
+  178  docker ps
+  179  ll
+  180  cd /opt/
+  181  vim index.html
+  182  docker cp index.html cont1:/var/www/html/index.html
+  183  history
+  184  exit
+  185  docker ps -a
+  186  docker exec -it cont2
+  187  docker exec -it cont2 cd /var/www/html/
+  188  cd /var/lib/docker/
+  189  ll
+  190  docker images
+  191  cd containers/
+  192  ll
+  193  docker ps -a
+  194  docker run --name test ubuntu
+  195  docker ps -aq
+  196  ll
+  197  docker ps -a
+  198  cd /var/lib/docker/
+  199  cd image/
+  200  ll
+  201  cd overlay2/
+  202  ll
+  203  cd imagedb/
+  204  ll
+  205  cd content/
+  206  ll
+  207  cd sha256/
+  208  ll
+  209  docker images
+  210  docker pull tomcat
+  211  ll
+  212  docker images
+  213  cd /var/lib/docker/
+  214  ll
+  215  cd
+  216  history
+  217  history > todays_commands.txt
+  218  ls
+  219  vim todays_commands.txt
+  220  cd /opt/
+  221  history
+  222  cd /var/lib/docker/
+  223  cd volumes/
+  224  ll
+  225  cd prod/
+  226  ll
+  227  cd _data/
+  228  ll
+  229  docker volume ls
+  230  docker volume inspect prod
+  231  docker volume rm prod
+  232  cd /opt/
+  233  ll
+  234  mkdir logs
+  235  docker run -it --name sbxct -v /opt/logs:/opt/logs amazonlinux
+  236  cd
+  237  cd /var/lib/docker/
+  238  ll
+  239  cd volumes/
+  240  ll
+  241  history
+  242  docker images
+  243  docker ps -a
+  244  docker start cont1
+  245  cd /opt/
+  246  docker cp index.html cont1:/var/www/html/index.html
+  247  vim index.html
+  248  docker ps -a
+  249  docker cp index.html cont1:/var/www/html/index.html
+  250  docker exec -it cont1 systemctl start httpd
+  251  docker exec -it cont1 httpd -DFOREGROUND
+  252  vim index.html
+  253  docker cp index.html cont1:/var/www/html/index.html
+  254  cd
+  255  ls
+  256  cd /home/ec2-user/
+  257  ls
+  258  mv images/ /opt/
+  259  cd /opt/
+  260  ll
+  261  docker cp images/ cont1:/var/www/html/images
+  262  docker images
+  263  docker ps -a
+  264  docker push kubenaresh/batch17d_1:httpd_cont1
+  265  docker push kubenaresh/batch17d_1:httpd
+  266  docker rmi -f $(docker images -q)
+  267  docker rm -f $(docker ps -aq)
+  268  docker rmi -f $(docker images -q)
+  269  docker ps -a
+  270  docker images
+  271  history
+  272  docker run -it --name cont1 amazonlinux
+  273  docker images
+  274  docker ps -a
+  275  docker commit a67b561ec896
+  276  docker images
+  277  docker tag 58df2c7bc463 kubenaresh/batch17d_1:httpd_vim
+  278  docker images
+  279  docker history kubenaresh/batch17d_1:httpd_vim
+  280  docker cp index.html cont1:/var/www/html/index.html
+  281  docker run -it --name cont2 -p 2702:80 kubenaresh/batch17d_1:httpd_vim
+  282  docker ps -a
+  283  docker run -it --name cont3 -p 8090:80 kubenaresh/batch17d_1:httpd_vim
+  284  docker cp index.html cont2:/var/www/html/index.html
+  285  docker cp index.html cont3:/var/www/html/index.html
+  286  docker images
+  287  docker ps -a
+  288  docker logs cont2
+  289  docker logs cont3
+  290  2RR0;136;0c
+  291  docker logs -f cont2
+  292  docker logs --tail 2 cont2
+  293  docker logs --tail 4 cont2
+  294  docker logs --since 10 cont2
+  295  history
+  296  cd /var/lib/docker/
+  297  docker volume ls
+  298  ll
+  299  cd volumes/
+  300  ll
+  301  docke volume help
+  302  docker volume help
+  303  docker volume create prod
+  304  docler volume ls
+  305  docker volume ls
+  306  docker volume create sbox
+  307  pwd
+  308  ll
+  309  ll prod/
+  310  docker run -it --name prodcont -v prod:/opt/logs amazonlinux
+  311  docker ps -a
+  312  docker rm -f prodcont
+  313  docker ps -a
+  314  ll
+  315  cd /opt/
+  316  cd logs/
+  317  ll
+  318  docker volume ls
+  319  cd
+  320  docker images
+  321  docker pull jenkins/jenkins:lts
+  322  docker images
+  323  docker run -it --name jenkins_cont -p 8080:8080 jenkins/jenkins:lts
+  324  docker run -itd --name jenkins_cont2 -p 8083:8080 -v /opt/jenkinsdata:/var/jenkins_home jenkins/jenkins:lts
+  325  cd /opt/
+  326  ll
+  327  cd jenkinsdata/
+  328  ll
+  329  docker ps -a
+  330  docker start jenkins_cont2
+  331  docker ps -a
+  332  docker rm -f $(docker ps -aq)
+  333  docker ps -a
+  334  docker run -it --name jenkins_cont -p 8083:8080 jenkins/jenkins:lts
+  335  cd
+  336  history
+  337  exit
+  338  history
+  339  docker images
+  340  docker rmi $(docker images -q)
+  341  docker ps -a
+  342  docker rm -f $(docker ps -aq)
+  343  docker rmi $(docker images -q)
+  344  docker images
+  345  docker ps -a
 
